@@ -23,15 +23,3 @@ body {
   min-height: 500px;
   border-radius: 20px;
 }
-ul{
-  list-style: none;
-}
-  .alterSwiper {
-    display: none;
-  }
-  .swiper-slide {
-    display: none;
-  }
-  .userPlateMobile {
-    display: none;
-  }

@@ -94,7 +94,6 @@ function App() {
   useEffect(() => {
     if (requared !== null && mockData.find(element => element.id === requared)) {
       let newArray = []
-      let oldArray = []
       newArray.push(mockData.find(element => element.id === requared))
       setStateData(newArray.concat(mockData.filter(element => element.id !== requared)))
       console.log(mockData.filter(element => element.id !== requared))
