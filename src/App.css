@@ -26,7 +26,6 @@ body {
 ul{
   list-style: none;
 }
-@media screen and (min-width:450px) {
   .alterSwiper {
     display: none;
   }
@@ -36,4 +35,3 @@ ul{
   .userPlateMobile {
     display: none;
   }
-}
