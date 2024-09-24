@@ -14,8 +14,16 @@ export default function UserPlate({ data }) {
             })
                 .catch(console.error);
         } else {
-            alert("Web Share API wasn't supported");
+            navigator.clipboard.writeText(document.location.href + thisUrl)
         }
+    }
+
+    function dateFormating(value) {
+        let newData = new Date(value * 1000)
+        let day = newData.getDay()
+        let month = newData.getMonth() + 1
+        let year = newData.getFullYear()
+        return `${day < 10 ? "0" + day : day}.${month < 10 ? "0" + month : month}.${year}`
     }
 
     return (
@@ -43,9 +51,9 @@ export default function UserPlate({ data }) {
                 </div>
                 <div className="upm-footerRightCol">
                     <ul>
-                        <li><span>Date</span><span>{data.date}</span></li>
-                        <li><span>price</span><span>{data.time}</span></li>
-                        <li><span>location</span><span>{data.content}</span></li>
+                        <li><span>Date</span><span>{dateFormating(data.date)}</span></li>
+                        <li><span>price</span><span>{data.price}&nbsp;USD</span></li>
+                        <li><span>location</span><span>{data.city}</span></li>
                         <li><span>Category</span><span>{data.statium}</span></li>
                         <li><span>Contact</span><span>{data.phone}</span></li>
                     </ul>

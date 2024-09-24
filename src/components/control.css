@@ -1,0 +1,35 @@
+.sidebar-controller {
+    z-index: 12;
+    position: absolute;
+    top: 48dvh;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+    border-radius: 30px;
+    border: 3px solid black;
+    background-color: white;
+    border-right: none;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.sidebar-language,
+.sidebar-settings {
+    border-radius: 20px;
+    border: solid black 1px;
+    padding: 10px;
+    display: flex;
+    transition: 0.2s ease-in-out;
+}
+.sidebar-language:hover,
+.sidebar-settings:hover {
+    cursor: pointer;
+    transform: scale(0.9);
+}
+.sidebar-language>img,
+.sidebar-settings>img {
+    width: 25px;
+    height: 25px;
+}

@@ -1,0 +1,39 @@
+.side-screen {
+    top: 18%;
+    left: 100%;
+    width: 100dvw;
+    height: 110dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    z-index: 10;
+    backdrop-filter: blur(5px);
+}
+
+.filter-List {
+    box-sizing: border-box;
+    width: 100dvw;
+    display: flex;
+    flex-direction: column;
+    gap: 5dvh;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.filter-List>li {
+    display: flex;
+    justify-content: center;
+    transition: 0.2 ease-in-out;
+}
+
+.filter-List>li:hover {
+    transform: scale(1.05);
+}
+
+.filter-List>li>span {
+    display: block;
+    transform: scaleX(1.8);
+    box-sizing: border-box;
+}

@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Fragment+Mono:ital@0;1&display=swap');
+
 .stylish-regular {
   font-family: "Fragment Mono", monospace;
   font-weight: 400;
@@ -11,15 +12,25 @@
   box-sizing: border-box;
 }
 
+.App {
+  overflow: hidden;
+  max-height: calc(100dvh - 3px);
+}
+
 body {
   font-family: "Fragment Mono", monospace;
-  overflow-y: hidden;
 }
+
 .alterSwiper {
   margin-top: -31dvh;
   height: 135dvh;
 }
+
 .swiper-slide {
   min-height: 500px;
   border-radius: 20px;
+}
+
+ul {
+  list-style: none;
 }
