@@ -14,15 +14,22 @@
 
 .App {
   overflow: hidden;
-  max-height: calc(100dvh - 3px);
+  height: 106dvh;
+}
+
+div.skiptranslate,
+iframe.skiptranslate {
+  visibility: hidden !important;
 }
 
 body {
+  margin-top: -40px;
+  overflow: hidden;
   font-family: "Fragment Mono", monospace;
 }
 
 .alterSwiper {
-  margin-top: -31dvh;
+  margin-top: -27dvh;
   height: 135dvh;
 }
 

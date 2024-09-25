@@ -9,8 +9,19 @@
     position: absolute;
     z-index: 10;
     backdrop-filter: blur(26px);
+    overflow: hidden;
 }
-
+.filter-List-lang {
+    box-sizing: border-box;
+    width: 100dvw;
+    min-height: 80dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 800;
+}
 .filter-List {
     box-sizing: border-box;
     width: 100dvw;
@@ -22,18 +33,18 @@
     font-weight: 800;
 }
 
-.filter-List>li {
+.filter-List>li,.filter-List-lang>li  {
     display: flex;
     justify-content: center;
     transition: 0.2 ease-in-out;
 }
 
-.filter-List>li:hover {
+.filter-List>li:hover,.filter-List-lang>li:hover {
     cursor: pointer;
     transform: scale(1.05);
 }
 
-.filter-List>li>span {
+.filter-List>li>span,.filter-List-lang>li>span  {
     display: block;
     transform: scaleX(1.8);
     box-sizing: border-box;

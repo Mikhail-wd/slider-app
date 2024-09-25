@@ -3,9 +3,10 @@
     position: absolute;
     border-radius: 15px;
     padding: 14px 24px;
+    font-size: 4dvw;
     border: solid 1px black;
     backdrop-filter: blur(15px);
     top: 30%;
-    left: -100%;
+    left: -450px;
     font-weight: 900;
 }

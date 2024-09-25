@@ -4,8 +4,9 @@ import UserPlate from './components/userPlate';
 import Control from "./components/control";
 import SideScreen from "./components/sideSlider"
 import { EffectCoverflow, EffectFlip, EffectCube, EffectCards } from "swiper/modules"
-import { useSearchParams } from "react-router-dom";
+import { useSearchParams, useNavigate } from "react-router-dom";
 import PopUp from "./components/popup";
+import { useLocalStorage } from "./hooks/useLocalStorage"
 import './App.css';
 import 'swiper/css';
 import "swiper/css/effect-flip"
@@ -13,12 +14,14 @@ import "swiper/css/effect-cube"
 import "swiper/css/effect-coverflow"
 import "swiper/css/effect-cards"
 
+const location = document.location
 
 const initialState = {
   filter: "none",
   filterType: "none",
   sideWindow: "closed",
   popup: 0,
+  language: 0,
   mockData: [{
     title: "Quartett Turnier",
     country: ".de",
@@ -88,7 +91,7 @@ const initialState = {
     country: ".de",
     date: 2374543353,
     price: 200,
-    city: "Lesbon",
+    city: "Lisbon",
     statium: "notebooks",
     phone: 33333333,
     colors: ["red", "red", "grey"],
@@ -102,6 +105,10 @@ function reducer(state, action) {
       return { ...state, filter: action.payload, sideWindow: "opened" }
     case "switch_side_window":
       return { ...state, sideWindow: action.payload }
+    case "change_language":
+      window.location.replace(location)
+      return { ...state, language: state.language + 1, }
+
     case "filter_type":
       if (action.payload === "date") {
         function filterDate(elemOne, elemTwo) {
@@ -244,20 +251,23 @@ const mockData = [{
 }]
 
 function App() {
+  const location = document.location.href
+  const [storage] = useLocalStorage()
+  const navigate = useNavigate()
   const [appState, dispatch] = useReducer(reducer, initialState)
+  const [rerender] = useState(prev => appState.language)
   const [search, setSearchParams] = useSearchParams()
   const requared = search.get("share")
-
+  document.cookie = `googtrans=/auto/${localStorage.getItem("Language")};path=/;domain=${document.domain}`;
 
   useEffect(() => {
     if (requared !== null &&
       mockData.find(element => element.id === requared) &&
       appState.filterType === "none") {
       dispatch({ type: "initialing", payload: requared })
+      navigate("/")
     }
-  }, [])
-
-  document.cookie = `googtrans=/auto/ru;path=/;domain=${document.domain}`;
+  }, [rerender])
 
   useEffect(() => {
     const script = document.createElement("script");
@@ -277,12 +287,7 @@ function App() {
         },
         "google_translate_element"
       );
-      setTimeout(() => {
-        let upperBar = document.getElementsByClassName("skiptranslate")
-        upperBar[0].style.opacity = "0"
-      }, 100)
     };
-
     return () => {
       document.body.removeChild(script);
     };

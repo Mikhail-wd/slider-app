@@ -16,7 +16,7 @@ export default function UserPlate({ data }) {
             })
                 .catch(console.error);
         } else {
-            navigator.clipboard.writeText(document.location.protocol + "//" + document.location.host + "/" + thisUrl)
+            navigator.clipboard.writeText(document.location.href + thisUrl)
             state.dispatch({ type: "popup" })
         }
     }
@@ -48,15 +48,15 @@ export default function UserPlate({ data }) {
                 <div className="upm-footer">
                     <div className="upm-footerLeftCol">
                         <ul>
-                            <li><strong>User NAME</strong></li>
+                            <li><strong><span>User</span> <span>NAME</span></strong></li>
                             {/* <li>{data.country}</li> */}
-                            <a ref={shareButton} onClick={(event) => shareButtonFunc(event)} className="upm-button" href="sdfsd"><img src={share} alt="shere" />Share</a>
+                            <a ref={shareButton} onClick={(event) => shareButtonFunc(event)} className="upm-button" href="sdfsd"><img src={share} alt="shere" /><span>Share</span></a>
                         </ul>
                     </div>
                     <div className="upm-footerRightCol">
                         <ul>
                             <li><span>Date</span><span>{dateFormating(data.date)}</span></li>
-                            <li><span>price</span><span>{data.price}&nbsp;USD</span></li>
+                            <li><span>price</span><span className="notranslate">{data.price} USD</span></li>
                             <li><span>location</span><span>{data.city}</span></li>
                             <li><span>Category</span><span>{data.statium}</span></li>
                             <li><span>Contact</span><span>{data.phone}</span></li>

@@ -1,13 +1,32 @@
 import { useContext, useEffect, useRef } from "react"
 import { AppState } from "../App"
 import { gsap } from "gsap";
+import { useLocalStorage } from "../hooks/useLocalStorage";
 
 import "./sideSlider.css"
 
 export default function SideScreen() {
+    const [lang, setLang] = useLocalStorage()
     const sideWindow = useRef()
     const state = useContext(AppState)
 
+    const languages = [
+        [navigator.language.split("-")[0], "Your language"],
+        ["ru", "Русский"],
+        ["en", "English"],
+        ["be", "Беларуская"],
+        ["uk", "Українська"],
+        ["tr", "Türkçe"],
+        ["pl","Polski"],
+        ["ja","日本語"],
+        ["it","Italiano"],
+        ["de","Deutsch"],
+        ["fr","Français"]
+    ]
+    function languageSelect(value) {
+        setLang(value)
+        state.dispatch({ type: "change_language" })
+    }
     function switchFilters(screen) {
         switch (screen) {
             case "filter":
@@ -21,10 +40,12 @@ export default function SideScreen() {
                 )
             case "language":
                 return (
-                    <ul className="filter-List">
-                        <li><span>RU</span></li>
-                        <li><span>ENG</span></li>
-                        <li><span>SPA</span></li>
+                    <ul className="filter-List-lang notranslate">
+                        {
+                            languages.map(element => {
+                                return <li onClick={() => { languageSelect(element[0]) }}><span>{element[1]}</span></li>
+                            })
+                        }
                     </ul >
                 )
             default:
