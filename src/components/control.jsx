@@ -6,9 +6,11 @@ import "./control.css"
 
 export default function Control() {
     const state = useContext(AppState)
+    
     function openLang() {
         state.dispatch({ payload: "language", type: "filter" })
     }
+
     function openFilter() {
         state.dispatch({ payload: "filter", type: "filter" })
     }

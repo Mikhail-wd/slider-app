@@ -1,0 +1,11 @@
+.popup {
+    z-index: 19;
+    position: absolute;
+    border-radius: 15px;
+    padding: 14px 24px;
+    border: solid 1px black;
+    backdrop-filter: blur(15px);
+    top: 30%;
+    left: -100%;
+    font-weight: 900;
+}

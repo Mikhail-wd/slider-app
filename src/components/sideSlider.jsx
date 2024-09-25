@@ -14,7 +14,7 @@ export default function SideScreen() {
                 return (
                     <ul className="filter-List">
                         <li onClick={() => state.dispatch({ type: "filter_type", payload: "price" })}><span>Price</span></li>
-                        <li onClick={() => state.dispatch({ type: "filter_type", payload: "country" })}><span >Country</span></li>
+                        <li onClick={() => state.dispatch({ type: "filter_type", payload: "city" })}><span >City</span></li>
                         <li onClick={() => state.dispatch({ type: "filter_type", payload: "date" })}><span >Date</span></li>
                         <li onClick={() => state.dispatch({ type: "filter_type", payload: "phone" })}><span>Phone</span></li>
                     </ul>
@@ -31,6 +31,7 @@ export default function SideScreen() {
                 console.warn("Error in filter")
         }
     }
+
     function closeModal(event) {
         event.stopPropagation()
         state.dispatch({ type: "switch_side_window", payload: "closed" })
