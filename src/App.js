@@ -277,19 +277,17 @@ function App() {
         },
         "google_translate_element"
       );
+      setTimeout(() => {
+        let upperBar = document.getElementsByClassName("skiptranslate")
+        upperBar[0].style.opacity = "0"
+      }, 100)
     };
 
     return () => {
       document.body.removeChild(script);
     };
-  }, []);
+  }, [])
 
-  useEffect(() => {
-    setTimeout(() => {
-      let upperBar = document.getElementsByClassName("skiptranslate")
-      upperBar[0].style.opacity = "0"
-    }, 300)
-  })
   return (
     <AppState.Provider value={{ data: appState, dispatch: dispatch }}>
       <div className="App">
