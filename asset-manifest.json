@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/slider-app/static/css/main.3255e4f0.css",
-    "main.js": "/slider-app/static/js/main.daacde90.js",
+    "main.css": "/slider-app/static/css/main.f87cf12f.css",
+    "main.js": "/slider-app/static/js/main.a0880afa.js",
     "static/media/settings.svg": "/slider-app/static/media/settings.bee41376e47044580472272d52d22055.svg",
     "static/media/earth.svg": "/slider-app/static/media/earth.56b7d6b6191109f233ab66a494ac9c89.svg",
     "static/media/share.svg": "/slider-app/static/media/share.ea92ede268a30e81621da3d9671a3a77.svg",
     "index.html": "/slider-app/index.html",
-    "main.3255e4f0.css.map": "/slider-app/static/css/main.3255e4f0.css.map",
-    "main.daacde90.js.map": "/slider-app/static/js/main.daacde90.js.map"
+    "main.f87cf12f.css.map": "/slider-app/static/css/main.f87cf12f.css.map",
+    "main.a0880afa.js.map": "/slider-app/static/js/main.a0880afa.js.map"
   },
   "entrypoints": [
-    "static/css/main.3255e4f0.css",
-    "static/js/main.daacde90.js"
+    "static/css/main.f87cf12f.css",
+    "static/js/main.a0880afa.js"
   ]
 }
