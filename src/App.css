@@ -15,6 +15,8 @@
 .App {
   overflow: hidden;
   height: 106dvh;
+  background-color: white;
+  margin-top: -40px;
 }
 
 div.skiptranslate,
@@ -23,6 +25,8 @@ iframe.skiptranslate {
 }
 
 body {
+  position: relative;
+  background-color: white;
   margin-top: -40px;
   overflow: hidden;
   font-family: "Fragment Mono", monospace;
@@ -40,4 +44,16 @@ body {
 
 ul {
   list-style: none;
+}
+
+.Toastify__toast-container{
+}
+.Toastify__toast {
+  border-radius: 15px;
+  font-size: 4dvw;
+  color: Black;
+  background-color: transparent;
+  backdrop-filter: blur(15px);
+  font-weight: 900;
+  border: solid 2px black;
 }

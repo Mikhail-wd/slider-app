@@ -1,8 +1,8 @@
 .side-screen {
-    top: 18%;
+    top: 24%;
     left: 100%;
     width: 100dvw;
-    height: 110dvh;
+    height: 101dvh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -10,7 +10,24 @@
     z-index: 10;
     backdrop-filter: blur(26px);
     overflow: hidden;
+    box-sizing: border-box;
 }
+
+.down-screen {
+    height: 115dvh;
+    width: 100dvw;
+    top: 14%;
+    left: 0%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    position: absolute;
+    z-index: -10;
+    opacity: 0;
+    background-color: #5858589c;
+    overflow: hidden;
+}
+
 .filter-List-lang {
     box-sizing: border-box;
     width: 100dvw;
@@ -21,31 +38,148 @@
     text-transform: uppercase;
     font-size: 24px;
     font-weight: 800;
+    align-items: center;
 }
+
 .filter-List {
     box-sizing: border-box;
     width: 100dvw;
     display: flex;
     flex-direction: column;
-    gap: 5dvh;
     text-transform: uppercase;
     font-size: 24px;
     font-weight: 800;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
 }
-
-.filter-List>li,.filter-List-lang>li  {
+.filter-List>.swiper-wrapper {
+    height: auto;
+}
+.filter-List>.swiper-wrapper>.swiper-slide {
+    max-height: 30px;
+    min-height: 30px;
+    display: flex;
+    justify-content: center;
+    color: black;
+}
+.filter-List>.swiper-wrapper>.swiper-slide>li,
+.filter-List-lang>.swiper-wrapper>.swiper-slide>li {
+    width: fit-content;
+    padding: 10px 20px;
     display: flex;
     justify-content: center;
     transition: 0.2 ease-in-out;
 }
 
-.filter-List>li:hover,.filter-List-lang>li:hover {
+.filter-List>.swiper-wrapper>.swiper-slide>li:hover,
+.filter-List-lang>.swiper-wrapper>.swiper-slide>li:hover {
     cursor: pointer;
     transform: scale(1.05);
 }
 
-.filter-List>li>span,.filter-List-lang>li>span  {
+.filter-List>span,
+.filter-List-lang>a,
+.filter-List-lang>li>span {
+    color: black;
     display: block;
     transform: scaleX(1.8);
     box-sizing: border-box;
+}
+.filter-List>li,
+.filter-List-lang>li {
+    max-height: 20px;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    transition: 0.2 ease-in-out;
+}
+
+.filter-List>li:hover,
+.filter-List-langli:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.filter-Listli>span,
+.filter-List-lang>a,
+.filter-List-langli>span {
+    color: black;
+    display: block;
+    transform: scaleX(1.8);
+    box-sizing: border-box;
+}
+.filter-List-item>span,
+.filter-List>.swiper-wrapper>.swiper-slide>a,
+.filter-List-langli>.swiper-wrapper>.swiper-slide>span {
+    color: black;
+    display: block;
+    transform: scaleX(1.7);
+    box-sizing: border-box;
+}
+.link {
+    text-decoration: none;
+}
+
+.link:visited {
+    color: black;
+}
+
+.underline {
+    border-bottom: solid 2px black;
+}
+
+.filter-List-search {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding-top: 30px;
+    height: 240px;
+    background-color: white;
+    justify-content: start;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.filterSearch {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    gap: 15px;
+}
+
+.filterSearch>button {
+    background-color: black;
+    border-radius: 20px;
+    border: solid 2px black;
+    padding: 18px 25px;
+    text-transform: uppercase;
+    font-family: "Fragment Mono", monospace;
+    cursor: pointer;
+    font-weight: 900;
+    font-size: 4dvw;
+    color: white;
+    transform: scaleX(1.15);
+}
+
+.filterSearch>input {
+    width: 105%;
+    border-radius: 20px;
+    border: solid 2px black;
+    padding: 20px 17px;
+    font-size: 4dvw;
+    text-transform: uppercase;
+    text-align: center;
+    outline: none;
+}
+
+.selectedInput {
+    box-shadow: 1px 1px 7px grey;
+}
+
+.filterSearch>h2 {
+    white-space: nowrap;
+    text-transform: uppercase;
 }

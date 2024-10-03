@@ -1,0 +1,45 @@
+.loader {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 32px 0 #fff, -32px 0 #fff;
+    position: relative;
+    animation: flash 0.5s ease-out infinite alternate;
+}
+
+.loaderWord {
+    text-transform: uppercase;
+    font-size: 4dvw;
+    font-weight: 900;
+}
+.loader-page {
+    height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loader-pagewrapper {
+    display: flex;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
+@keyframes flash {
+    0% {
+        background-color: rgb(48, 47, 47);
+        box-shadow: 32px 0 rgb(48, 47, 47), -32px 0 #FFF;
+    }
+
+    50% {
+        background-color: #FFF;
+        box-shadow: 32px 0 rgb(48, 47, 47), -32px 0 rgb(48, 47, 47);
+    }
+
+    100% {
+        background-color: rgb(48, 47, 47);
+        box-shadow: 32px 0 #FFF, -32px 0 rgb(48, 47, 47);
+    }
+}
