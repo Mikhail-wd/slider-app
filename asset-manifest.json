@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/slider-app/static/css/main.f3b999e4.css",
+    "main.css": "/slider-app/static/css/main.3b0bcc58.css",
     "main.js": "/slider-app/static/js/main.a39d784d.js",
     "static/media/noImage.png": "/slider-app/static/media/noImage.5935b90a9c1dfbd15126.png",
     "static/media/settings.svg": "/slider-app/static/media/settings.bee41376e47044580472272d52d22055.svg",
@@ -8,11 +8,11 @@
     "static/media/share.svg": "/slider-app/static/media/share.ea92ede268a30e81621da3d9671a3a77.svg",
     "index.html": "/slider-app/index.html",
     "static/media/search.svg": "/slider-app/static/media/search.ea867f235c24ccaf3b3272e0141411d0.svg",
-    "main.f3b999e4.css.map": "/slider-app/static/css/main.f3b999e4.css.map",
+    "main.3b0bcc58.css.map": "/slider-app/static/css/main.3b0bcc58.css.map",
     "main.a39d784d.js.map": "/slider-app/static/js/main.a39d784d.js.map"
   },
   "entrypoints": [
-    "static/css/main.f3b999e4.css",
+    "static/css/main.3b0bcc58.css",
     "static/js/main.a39d784d.js"
   ]
 }
