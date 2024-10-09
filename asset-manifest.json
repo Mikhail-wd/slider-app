@@ -1,20 +1,18 @@
 {
   "files": {
-    "main.css": "/slider-app/static/css/main.653611a1.css",
-    "main.js": "/slider-app/static/js/main.e2c1e96c.js",
-    "static/media/noImage.png": "/slider-app/static/media/noImage.5935b90a9c1dfbd15126.png",
-    "static/media/settings.svg": "/slider-app/static/media/settings.bee41376e47044580472272d52d22055.svg",
-    "static/media/earth.svg": "/slider-app/static/media/earth.56b7d6b6191109f233ab66a494ac9c89.svg",
-    "static/media/home.svg": "/slider-app/static/media/home.96397df25488a2cdd5dbf9961e5cfc47.svg",
-    "static/media/share.svg": "/slider-app/static/media/share.ea92ede268a30e81621da3d9671a3a77.svg",
-    "static/media/info.svg": "/slider-app/static/media/info.6f62d128d83821a90c0599e2d16e05f4.svg",
+    "main.css": "/slider-app/static/css/main.b9edfee0.css",
+    "main.js": "/slider-app/static/js/main.9bec9dd7.js",
+    "static/media/man.png": "/slider-app/static/media/man.a2056b68a4f2555e6a80.png",
+    "static/media/RebelTypeDog-Regular.otf": "/slider-app/static/media/RebelTypeDog-Regular.02a3b5cbe00c3ab74a65.otf",
+    "static/media/knot.svg": "/slider-app/static/media/knot.1c2dbee293e26bb3c48979ef9b332314.svg",
     "index.html": "/slider-app/index.html",
-    "static/media/search.svg": "/slider-app/static/media/search.ea867f235c24ccaf3b3272e0141411d0.svg",
-    "main.653611a1.css.map": "/slider-app/static/css/main.653611a1.css.map",
-    "main.e2c1e96c.js.map": "/slider-app/static/js/main.e2c1e96c.js.map"
+    "static/media/arrowLeft.svg": "/slider-app/static/media/arrowLeft.058355d4e956c73227c04d5260b8de8d.svg",
+    "static/media/arrowUp.svg": "/slider-app/static/media/arrowUp.d746988b745c666df11dc859f6fc8b84.svg",
+    "main.b9edfee0.css.map": "/slider-app/static/css/main.b9edfee0.css.map",
+    "main.9bec9dd7.js.map": "/slider-app/static/js/main.9bec9dd7.js.map"
   },
   "entrypoints": [
-    "static/css/main.653611a1.css",
-    "static/js/main.e2c1e96c.js"
+    "static/css/main.b9edfee0.css",
+    "static/js/main.9bec9dd7.js"
   ]
 }
